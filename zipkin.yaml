@@ -4,10 +4,10 @@ server:
 spring:
   rabbitmq:
     port: 5672
-    host: 0.0.0.0
+    host: localhost
   datasource:
     schema: classpath:/mysql.sql
-    url: jdbc:mysql://0.0.0.0:3306/zipkin?autoReconnect=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/zipkin?autoReconnect=true&useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
@@ -27,7 +27,7 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://0.0.0.0:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     statusPageUrlPath: /info
     healthCheckUrlPath: /health
