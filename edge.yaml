@@ -43,7 +43,8 @@ management:
     sensitive: true
   endpoints:
     web:
-      expose: "*"
+      exposure:
+        include: "*"
     health:
       show-details: true
     cors:
