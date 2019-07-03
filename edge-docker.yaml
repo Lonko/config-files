@@ -22,14 +22,13 @@ endpoints:
 eureka:
   instance:
       leaseRenewalIntervalInSeconds: 10
+      statusPageUrlPath: /actuator/info
+      healthCheckUrlPath: /actuator/health
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
-  instance:
-    statusPageUrlPath: /actuator/info
-    healthCheckUrlPath: /actuator/health
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 logging:
   level:
