@@ -3,7 +3,7 @@ server:
 
 turbine:
   appConfig: planes,flights,fares,bookings,passengers,mail,payments
-  clusterNameExpression: 'default'
+  clusterNameExpression: "'default'"
 
 spring:
   rabbitmq:
